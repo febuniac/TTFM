@@ -40,7 +40,7 @@ from theano.tensor.nnet import conv
 from theano.tensor.nnet import softmax
 from theano.tensor import shared_randomstreams
 from theano.tensor.signal import downsample
-from six.moves import cPickle
+
 
 
 
