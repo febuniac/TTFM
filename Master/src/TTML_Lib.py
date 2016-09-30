@@ -70,7 +70,7 @@ class CTS:
 	def cria_rede_padrao(self):
 		self.mini_batch_size = 10
 		self.net_name = Network([FullyConnectedLayer(n_in=784, n_out=100),SoftmaxLayer(n_in=100, n_out=10)], self.mini_batch_size)
-		
+	
 	def treina_rede(self):
 		self.epochs = input("Number of Epochs:")
 		#mini_batch_size = 10
@@ -169,9 +169,6 @@ def mostra_imagem_banco(images):
 	img = smp.toimage(P)# Create a PIL image
 	img.show()
 
-def reclassifica_imagem_banco():
-	pass
-
 
 #Functions of the program______REDE
 def pimage_to_array():
@@ -201,16 +198,8 @@ def pcarrega_rede():
 
 def pcarrega_banco():
 	databasename= raw_input ('Enter the name of the file that will load your database:')
-	carrega_banco(databasename)
-	
-#def papaga_imagem_banco():
-	#apaga_imagem_banco(imagem)
+	return carrega_banco(databasename)
 
-def function():
-	pass
-def function():
-	pass
-def function():
-	pass
+	
 
 
