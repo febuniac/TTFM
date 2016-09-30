@@ -90,7 +90,7 @@ class CTS_banco:
 	def cria_banco(self):
 		self.banco = []
 		print(self.banco)
-	def insere_imagem_banco(self,banco):
+	def insere_imagem_banco(self,banco,tipo):
 		self.rimage= raw_input("Name of the image:")
 		self.mat = matplotlib.image.imread(self.rimage)
 		self.pixels=np.zeros((784,1),dtype=np.uint8)
@@ -101,6 +101,30 @@ class CTS_banco:
 				#print(self.pixels[y+x*28])
 
 		self.discover=np.zeros((10,1))
+
+
+		if tipo ==0:
+			self.discover[0, 0]=1
+		if tipo ==1:
+			self.discover[1, 0]=1
+		if tipo ==2:
+			self.discover[2, 0]=1
+		if tipo ==3:
+			self.discover[3, 0]=1
+		if tipo ==4:
+			self.discover[4, 0]=1
+		if tipo ==5:
+			self.discover[5, 0]=1
+		if tipo ==6:
+			self.discover[6, 0]=1
+		if tipo ==7:
+			self.discover[7, 0]=1
+		if tipo ==8:
+			self.discover[8, 0]=1
+		if tipo ==9:
+			self.discover[9, 0]=1
+		else:
+			print("Tree out of range")	
 		self.cmplist=[self.pixels,self.discover]
 
 		img = smp.toimage(self.mat)# Create a PIL image
